@@ -27,9 +27,14 @@ pipeline {
 
     stage('docker push') {
       steps {
-        sh 'docker push cicd-pipeline'
+        sh '''docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWD
+docker push cicd-pipeline'''
       }
     }
 
+  }
+  environment {
+    DOCKER_PASSWD = 'DockerMeth132435#'
+    DOCKER_LOGIN = 'phonty29'
   }
 }
