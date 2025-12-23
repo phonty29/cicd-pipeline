@@ -28,7 +28,7 @@ pipeline {
     stage('docker push') {
       steps {
         sh '''docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWD
-docker push cicd-pipeline'''
+docker push phonty29/cicd-pipeline'''
       }
     }
 
