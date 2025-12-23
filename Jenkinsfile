@@ -21,8 +21,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh '''whoami
-docker build -t cicd-pipeline .'''
+        sh 'docker build --platform=linux/amd64 -t cicd-pipeline .'
       }
     }
 
