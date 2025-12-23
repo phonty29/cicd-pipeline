@@ -21,7 +21,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh 'docker build -t cicd-pipeline'
+        sh 'docker build -t cicd-pipeline .'
       }
     }
 
