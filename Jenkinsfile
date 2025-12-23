@@ -21,7 +21,7 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh 'docker build --platform=linux/arm64 -t cicd-pipeline .'
+        sh 'docker build -t cicd-pipeline .'
       }
     }
 
