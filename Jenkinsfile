@@ -21,7 +21,8 @@ pipeline {
 
     stage('docker build') {
       steps {
-        sh 'docker build -t cicd-pipeline .'
+        sh '''whoami
+docker build -t cicd-pipeline .'''
       }
     }
 
